@@ -9,6 +9,11 @@ const projectManagerRoutes = require("./routes/projectManagerRoutes");
 const developerRoutes = require("./routes/developerRoutes");
 const PORT = process.env.PORT || 4500;
 
+const corsOptions = {
+    origin: process.env.APPLICATION_URL,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+};
+
 // connect Database
 mongoose
     .connect(process.env.db)
@@ -17,7 +22,7 @@ mongoose
     })
     .catch((err) => console.log(err));
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/login", loginRoutes);
