@@ -22,7 +22,7 @@ const AddRemoveSkillsPage = () => {
 
         try {
             const response = await axios.post(
-                `${import.meta.env.SERVER_URL}/admin/add_skills`,
+                `${process.env.SERVER_URL}/admin/add_skills`,
                 addSkill
             );
 

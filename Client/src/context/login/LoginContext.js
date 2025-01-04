@@ -32,7 +32,7 @@ const LoginContext = ({ children, setToken }) => {
         if (dev) {
             try {
                 const response = await axios.post(
-                    "http://localhost:4500/login/dev",
+                    `${process.env.SERVER_URL}/login/dev`,
                     loginUser
                 );
 
@@ -60,7 +60,7 @@ const LoginContext = ({ children, setToken }) => {
         if (PM) {
             try {
                 const response = await axios.post(
-                    "http://localhost:4500/login/PM",
+                    `${process.env.SERVER_URL}/login/PM`,
                     loginUser
                 );
 
@@ -84,7 +84,7 @@ const LoginContext = ({ children, setToken }) => {
 
         try {
             const response = await axios.post(
-                "http://localhost:4500/login/admin",
+                `${process.env.SERVER_URL}/login/admin`,
                 loginUser
             );
 
