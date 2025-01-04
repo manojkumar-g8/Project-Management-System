@@ -69,7 +69,9 @@ const SubmitSingleTask = ({ reqList, myProject }) => {
 
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/project_manager/update_dev_reqArray`,
+                `${
+                    import.meta.env.SERVER_URL
+                }/project_manager/update_dev_reqArray`,
                 { myProject, tempDevArray, tempReqArray }
             );
 

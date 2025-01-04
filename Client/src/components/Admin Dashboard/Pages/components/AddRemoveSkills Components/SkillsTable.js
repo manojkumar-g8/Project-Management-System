@@ -12,7 +12,7 @@ const SkillsTable = ({ skills }) => {
     const deleteSkill = async (skill_id) => {
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/remove_skill`,
+                `${import.meta.env.SERVER_URL}/admin/remove_skill`,
                 { skill_id }
             );
             if (response.data) {
