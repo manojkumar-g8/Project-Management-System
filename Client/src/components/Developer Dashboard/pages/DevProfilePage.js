@@ -46,7 +46,7 @@ const DevProfilePage = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "http://localhost:4500/developer/update_profile",
+                `${process.env.SERVER_URL}/developer/update_profile`,
                 personDetail
             );
             if (response.data) {

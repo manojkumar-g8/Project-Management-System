@@ -16,7 +16,7 @@ function App() {
     async function setAdminNameAndPass() {
         try {
             const response = await axios.post(
-                "http://localhost:4500/admin/set_admin"
+                `${process.env.SERVER_URL}/admin/set_admin`
             );
             if (response) {
                 console.log(`Admin default is added`);

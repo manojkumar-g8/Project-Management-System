@@ -37,7 +37,7 @@ const SingleProjectPage = () => {
     const handleSubmitProject = async () => {
         try {
             const response = await axios.post(
-                "http://localhost:4500/project_manager/submit_project",
+                `${process.env.SERVER_URL}/project_manager/submit_project`,
                 { projectId: singleProject._id }
             );
             if (response.data) {

@@ -93,7 +93,7 @@ const AssignTaskPage = () => {
 
         try {
             const response = await axios.put(
-                "http://localhost:4500/project_manager/update_dev_list",
+                `${process.env.SERVER_URL}/project_manager/update_dev_list`,
                 idAndDevArr
             );
 

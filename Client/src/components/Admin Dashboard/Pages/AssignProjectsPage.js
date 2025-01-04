@@ -106,7 +106,7 @@ const AssignProjectsPage = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:4500/admin/add_project",
+                `${process.env.SERVER_URL}/admin/add_project`,
                 projectDetails
             );
 

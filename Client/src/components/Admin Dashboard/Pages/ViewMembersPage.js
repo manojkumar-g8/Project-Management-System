@@ -23,7 +23,7 @@ const ViewMembersPage = () => {
     const handleMemberDelete = async () => {
         try {
             const response = await axios.post(
-                "http://localhost:4500/admin/delete_member",
+                `${process.env.SERVER_URL}/admin/delete_member`,
                 delPerson
             );
 
