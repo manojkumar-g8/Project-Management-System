@@ -16,7 +16,7 @@ function App() {
     async function setAdminNameAndPass() {
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/set_admin`
+                `https://project-management-system-server.vercel.app/admin/set_admin`
             );
             if (response) {
                 console.log(`Admin default is added`);
