@@ -21,7 +21,7 @@ const SubmittedProjectsPage = () => {
     const handleAdminProjectComplete = async (project) => {
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/complete_project`,
+                `${process.env.REACT_APP_API_URL}/admin/complete_project`,
                 project
             );
             if (response.data) {

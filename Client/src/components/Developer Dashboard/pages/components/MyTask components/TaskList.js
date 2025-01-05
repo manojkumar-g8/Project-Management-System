@@ -60,7 +60,7 @@ const TaskList = ({ myProject, loginMember }) => {
 
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/developer/update_dev_reqArray`,
+                `${process.env.REACT_APP_API_URL}/developer/update_dev_reqArray`,
                 { myProject, tempDevArray, tempReqArray }
             );
 

@@ -13,7 +13,7 @@ const AdminContext = ({ children }) => {
     async function getAllMembers() {
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/get`
+                `${process.env.REACT_APP_API_URL}/admin/get`
             );
             if (response.data) {
                 setAllMembers(response.data.allMembers.reverse());
@@ -34,7 +34,7 @@ const AdminContext = ({ children }) => {
     async function getAllProjects() {
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/get_projects`
+                `${process.env.REACT_APP_API_URL}/admin/get_projects`
             );
 
             if (response.data) {
@@ -57,7 +57,7 @@ const AdminContext = ({ children }) => {
     async function getAllSkills() {
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/get_all_skills`
+                `${process.env.REACT_APP_API_URL}/admin/get_all_skills`
             );
             if (response.data.allSkills) {
                 setSkills(response.data.allSkills.reverse());
@@ -105,7 +105,7 @@ const AdminContext = ({ children }) => {
 
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/add_members`,
+                `${process.env.REACT_APP_API_URL}/admin/add_members`,
                 newMember
             );
 
@@ -146,7 +146,7 @@ const AdminContext = ({ children }) => {
 
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/get_projects`
+                `${process.env.REACT_APP_API_URL}/admin/get_projects`
             );
 
             if (response.data) {
@@ -221,7 +221,7 @@ const AdminContext = ({ children }) => {
     async function percentUpdater(tempDevArr, project_manager, myProject) {
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/project_manager/update_percent`,
+                `${process.env.REACT_APP_API_URL}/project_manager/update_percent`,
                 { tempDevArr, project_manager, myProject }
             );
             if (response.data) {

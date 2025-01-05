@@ -30,7 +30,7 @@ const AdminProfilePage = () => {
 
         try {
             const response = await axios.post(
-                `${process.env.SERVER_URL}/admin/update_profile`,
+                `${process.env.REACT_APP_API_URL}/admin/update_profile`,
                 tempAdmin
             );
             if (response.data) {
