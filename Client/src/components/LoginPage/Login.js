@@ -19,6 +19,17 @@ const Login = () => {
     const navigate = useNavigate();
     return (
         <div className="container-fluid login_div">
+            <div
+                style={{
+                    position: "absolute",
+                    top: 0,
+                }}
+                className="p-2"
+            >
+                <h5>Admin</h5>
+                <p>Email: admin@mail.com</p>
+                <p>Password: 123456</p>
+            </div>
             <div className="row p-3">
                 <section className="col d-none d-xl-block"></section>
                 <section className="col login_section">
